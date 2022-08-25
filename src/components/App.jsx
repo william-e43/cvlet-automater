@@ -22,6 +22,7 @@ class App extends React.Component {
   }
 
   onSubmit () {
+    console.log('csv: ', this.state.csv);
     this.state.csv.forEach((obj) => {
       const docDef = makeDocDef(obj);
       makePDF(docDef, `${obj['fileName']}WilliamEliasonCovLet`);
